@@ -1,15 +1,15 @@
 body {
     margin: 10px;
-    overflow: auto;
-}
-
-.webpage-wrap {
 }
 
 @media (max-width: 700px) {
     .webpage-wrap {
         display: flex;
         justify-content: center;
+    }
+
+    body {
+        margin: 10px 0;
     }
 }
 
