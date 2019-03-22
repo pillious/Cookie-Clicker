@@ -17,91 +17,96 @@
 </head>
 
 <body>
+    <div class="webpage-wrap">
+        <div>
 
 
+            <div class="cookieInfoWrap">
+                <div>Cookies: <span id="cookiesCounterSpan">0</span></div>
+                <div>Cookies Per Second (CPS): <span id="cpsSpan">0</span></div>
+                <div>Cookies Per Click (CPC): <span id="cpcSpan">1</span></div>
+            </div>
 
-    <div class="cookieInfoWrap">
-        <div>Cookies: <span id="cookiesCounterSpan">0</span></div>
-        <div>Cookies Per Second (CPS): <span id="cpsSpan">0</span></div>
-        <div>Cookies Per Click (CPC): <span id="cpcSpan">1</span></div>
+
+            <div class="cookieWrap">
+                <i class="fas fa-cookie-bite text-center" onclick="cookieClicked()"></i>
+            </div>
+
+
+            <!-- upgrades -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="text-right">
+                            <button class="btn btn-sm btn-success" onclick="rotateThroughBulkBuyOptions()"
+                                id="bulkBuyBtn">x1</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="upgrade">
+                                <i class="fas fa-tractor icon"></i>
+                                <div class="info">
+                                    <div>Cost: 100</div>
+                                    <div>CPS: +0</div>
+                                    <div>CPC: +1</div>
+                                </div>
+                                <div>
+                                    <button onclick="farmClicked()"
+                                        class="btn btn-outline-dark upgradeBtn text-right">Buy
+                                        Farm</button>
+                                    <div class="text-center">Farms: <span id="farmsCountSpan">0</span></div>
+                                </div>
+
+
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="upgrade">
+                                <i class="fas fa-truck-pickup icon"></i>
+                                <div class="info">
+                                    <div>Cost: 1000</div>
+                                    <div>CPS: +5</div>
+                                    <div>CPC: +15</div>
+                                </div>
+                                <div>
+                                    <button onclick="truckClicked()"
+                                        class="btn btn-outline-dark upgradeBtn text-right">Buy
+                                        Truck</button>
+                                    <div class="text-center">Trucks: <span id="trucksCountSpan">0</span></div>
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="upgrade">
+                                <i class="fas fa-industry icon"></i>
+                                <div class="info">
+                                    <div>Cost: 100000</div>
+                                    <div>CPS: +600</div>
+                                    <div>CPC: +1600</div>
+                                </div>
+                                <div>
+                                    <button onclick="factoryClicked()"
+                                        class="btn btn-outline-dark upgradeBtn text-right">Buy
+                                        Factory</button>
+                                    <div class="text-center">Factories: <span id="factoriesCountSpan">0</span></div>
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-outline-danger" onclick="resetGame()">Reset Game</button>
+        </div>
     </div>
-
-
-    <div class="cookieWrap">
-        <i class="fas fa-cookie-bite text-center" onclick="cookieClicked()"></i>
-    </div>
-
-
-    <!-- upgrades -->
-    <table>
-        <tbody>
-            <tr>
-                <td class="text-right">
-                    <button class="btn btn-sm btn-success" onclick="rotateThroughBulkBuyOptions()"
-                        id="bulkBuyBtn">x1</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="upgrade">
-                        <i class="fas fa-tractor icon"></i>
-                        <div class="info">
-                            <div>Cost: 100</div>
-                            <div>CPS: +0</div>
-                            <div>CPC: +1</div>
-                        </div>
-                        <div>
-                            <button onclick="farmClicked()" class="btn btn-outline-dark upgradeBtn text-right">Buy
-                                Farm</button>
-                            <div class="text-center">Farms: <span id="farmsCountSpan">0</span></div>
-                        </div>
-
-
-                    </div>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <div class="upgrade">
-                        <i class="fas fa-truck-pickup icon"></i>
-                        <div class="info">
-                            <div>Cost: 1000</div>
-                            <div>CPS: +5</div>
-                            <div>CPC: +15</div>
-                        </div>
-                        <div>
-                            <button onclick="truckClicked()" class="btn btn-outline-dark upgradeBtn text-right">Buy
-                                Truck</button>
-                            <div class="text-center">Trucks: <span id="trucksCountSpan">0</span></div>
-                        </div>
-
-                    </div>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <div class="upgrade">
-                        <i class="fas fa-industry icon"></i>
-                        <div class="info">
-                            <div>Cost: 100000</div>
-                            <div>CPS: +600</div>
-                            <div>CPC: +1600</div>
-                        </div>
-                        <div>
-                            <button onclick="factoryClicked()" class="btn btn-outline-dark upgradeBtn text-right">Buy
-                                Factory</button>
-                            <div class="text-center">Factories: <span id="factoriesCountSpan">0</span></div>
-                        </div>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-    <button class="btn btn-outline-danger" onclick="resetGame()">Reset Game</button>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

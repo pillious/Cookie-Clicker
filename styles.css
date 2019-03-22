@@ -9,6 +9,13 @@ body {
     width: 100%;
 }
 
+@media (max-width: 700px) {
+    .webpage-wrap {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 .cookieInfoWrap {
     border: 1px solid gray;
     border-radius: 5px;
