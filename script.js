@@ -75,7 +75,7 @@ window.onload = function () {
     bulkBuy = 1;
 
     //buy cost
-    farmCost = 10;
+    farmCost = 100;
     truckCost = 1000;
     factoryCost = 100000;
 
