@@ -1,0 +1,60 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.cookieInfoWrap {
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 300px;
+    
+}
+
+.cookieWrap {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-cookie-bite {
+    font-size: 200px;
+    cursor: pointer;
+    user-select: none;
+    margin: 20px auto;
+    color: #956340;
+}
+
+#bulkBuyBtn {
+    width: 55px;
+}
+
+.upgrade {
+    border: 1px solid;
+    padding: 10px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.icon {
+    font-size: 50px;    
+}
+
+.info {
+    margin: 0 10px;
+    color: #0c5460;
+}
+
+.upgradeBtn {
+    margin-left: 10px;
+}
+
+
+
