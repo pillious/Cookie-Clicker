@@ -105,19 +105,20 @@ window.onload = function () {
 };
 
 window.onbeforeunload = function () {
-    userdata = {
-        cookiesCount: cookiesCount,
-        cps: cps,
-        cpc: cpc,
-        farms: farms,
-        trucks: trucks,
-        factories: factories,
-        farmCost: farmCost,
-        truckCost: truckCost,
-        factoryCost: factoryCost
-    };
-    localStorage.setItem('userdata', JSON.stringify(userdata));
-
+    if (!isNaN(cookiesCount)) {
+        userdata = {
+            cookiesCount: cookiesCount,
+            cps: cps,
+            cpc: cpc,
+            farms: farms,
+            trucks: trucks,
+            factories: factories,
+            farmCost: farmCost,
+            truckCost: truckCost,
+            factoryCost: factoryCost
+        };
+        localStorage.setItem('userdata', JSON.stringify(userdata));
+    }
 };
 
 function cookieClicked() {
@@ -149,7 +150,7 @@ function farmClicked() {
         farmsCountSpan.innerHTML = farms;
 
         farmCost = upgradesBought.nextUpgradeCost;
-        farmCostSpan.innerHTML = upgradesBought.nextUpgradeCost;
+        farmCostSpan.innerHTML = farmCost;
 
         console.log(upgradesBought)
     }
@@ -164,7 +165,7 @@ function truckClicked() {
         trucksCountSpan.innerHTML = trucks;
 
         truckCost = upgradesBought.nextUpgradeCost;
-        truckCostSpan.innerHTML = upgradesBought.nextUpgradeCost;
+        truckCostSpan.innerHTML = truckCost;
     }
 }
 
@@ -177,7 +178,7 @@ function factoryClicked() {
         factoriesCountSpan.innerHTML = factories;
 
         factoryCost = upgradesBought.nextUpgradeCost;
-        factoryCostSpan.innerHTML = upgradesBought.nextUpgradeCost;
+        factoryCostSpan.innerHTML = factoryCost;
     }
 }
 
